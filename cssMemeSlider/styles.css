@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* scroll-snap-type: none; */
+}
+.main-window {
+    max-width: 1200px;
+    height: 600px;
+    margin: auto;
+    border: 1px solid black;
+    overflow: hidden;
+    
+    /* display: flex;
+    flex-wrap: wrap; */
+}
+
+.slider-window {
+    max-width: 640px;
+    /* height: 400px; */
+    margin: auto;
+    margin-top: 20px;
+    /* padding: 0px 10px; */
+    overflow: hidden;
+    display:flex;
+    scroll-snap-type: x mandatory;
+    /* flex-wrap: nowrap;  */
+}
+
+.slider-pagination {
+    max-width: 100%;
+/* height: 180px; */
+    margin: auto;
+    padding: 10px 10px 0px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider-text {
+    width: 70%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    
+}
+.slider-txt {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    margin-top: 20px;
+}
+
+.slider-block {
+    min-width: 100%;
+    height:auto;
+    padding-bottom: 40px;
+    /* transition: 4s; */
+}
+.slider-btns {
+  width: 200px;
+
+
+}
+input {
+    /* visibility: hidden; */
+    display:none;
+
+}
+.btns {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin: 10px;
+    border: 1px solid red;
+    border-radius: 50%;
+}
+.btns:hover {
+    background-color: red;
+    cursor: pointer;
+    transition: 1s; 
+}
+
+.slider-img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: fill;
+    object-position: center;
+    display: inline-block;
+}
+
+.btn {
+    display:inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 100%;
+}
+
+.btn:hover {
+    background-color: black;
+}
+/* #img1:target::after{
+    content: "Let'Go!";
+    font-size: small;
+    color:black;
+}
+#img2:target::after{
+    content: "'Yes we can!'";
+    font-size: small;
+    color:black;
+}
+#img3:target::after{
+    content: "Gimme the loot!";
+    font-size: small;
+    color:black;
+}
+#img4:target{
+    content: "a-AAAAAAAAA!";
+    font-size: small;
+    color:black;
+} */
+
+#slide-one:checked ~ .slide-1  {
+    transform: translateX(0%);
+    transition: 2s;
+    
+}
+#slide-two:checked ~ .slide-2  {
+    transform: translateX(-200%);
+    transition: 2s;
+    
+}
+#slide-three:checked ~ .slide-3  {
+    transform: translateX(-300%);
+    transition: 2s;
+    
+}
+#slide-four:checked ~ .slide-4  {
+    transform: translateX(-400%);
+    transition: 2s;
+    
+}
+#slide-one:checked ~ #label-one {
+    background-color: red;
+}
+#slide-two:checked ~  .slider-btns label {
+    background-color: red;
+}
+#slide-three:checked ~ .slider-btns label {
+    background-color: red;
+}
+#slide-four:checked ~ .slider-btns label {
+    background-color: red;
+}
+
+
+
