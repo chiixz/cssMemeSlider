@@ -1,61 +1,63 @@
 * {
     box-sizing: border-box;
-    scroll-behavior: smooth;
-    /* scroll-snap-type: none; */
+
 }
 .main-window {
-    max-width: 1200px;
-    height: 600px;
+    max-width: 80%;
+    height: 50%;
     margin: auto;
     border: 1px solid black;
     overflow: hidden;
     
-    /* display: flex;
-    flex-wrap: wrap; */
+}
+.container {
+    display:flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-items:center;
 }
 
 .slider-window {
-    max-width: 640px;
+    /* max-width: 640px; */
     /* height: 400px; */
     margin: auto;
-    margin-top: 20px;
     /* padding: 0px 10px; */
     overflow: hidden;
     display:flex;
-    scroll-snap-type: x mandatory;
     /* flex-wrap: nowrap;  */
 }
 
-.slider-pagination {
-    max-width: 100%;
-/* height: 180px; */
-    margin: auto;
-    padding: 10px 10px 0px 10px;
-    display: flex;
-    justify-content: space-between;
-}
 
 .slider-text {
-    width: 70%;
+    width: 50%;
     display: inline-flex;
-    flex-wrap: wrap;
+    overflow: hidden;
+    /* margin-right: -50em; */
+
     
 }
 .slider-txt {
     width: 100%;
     height: 100%;
-    margin: 0px;
-    margin-top: 20px;
+    /* margin: 0rem;
+    margin-top: 15rem; */
 }
+
+/* .slider-text p {
+    visibility: hidden;
+} */
+
+
 
 .slider-block {
     min-width: 100%;
     height:auto;
-    padding-bottom: 40px;
+    padding-bottom: 3rem;
     /* transition: 4s; */
 }
 .slider-btns {
-  width: 200px;
+  width: 50%;
+  text-align: end;
 
 
 }
@@ -65,9 +67,9 @@ input {
 }
 .btns {
     display: inline-block;
-    width: 25px;
-    height: 25px;
-    margin: 10px;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 1rem;
     border: 1px solid red;
     border-radius: 50%;
 }
@@ -87,8 +89,8 @@ input {
 
 .btn {
     display:inline-block;
-    width: 20px;
-    height: 20px;
+    width: 1.5rem;
+    height: 1.5rem;
     border: 1px solid black;
     border-radius: 100%;
 }
@@ -96,12 +98,19 @@ input {
 .btn:hover {
     background-color: black;
 }
+.slide {
+    /* display: none; */
+}
 
 
 #slide-one:checked ~ .slider-window #img1  {
     transform: translateX(0%);
     transition: 2s;
     
+}
+/* #slide-one:checked ~ .slider-text #txt1  {
+    transform:translateX(-200%);
+    transition: 2s; */
 }
 #slide-two:checked ~ .slider-window #img1  {
     transform: translateX(-100%);
